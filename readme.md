@@ -13,4 +13,4 @@ It has following features:
 Application is written using ReactJS with Aviator routing and custom Store system. 
 
 To serve development version of the app run
-``npm start``. In order to run bundled prod version of the app please run ``serve -s build -l 4000`` than open tab with URL ``http://localhost:4000``.
+``npm start``. In order to run bundled prod version of the app please run ``npm un build`` than ``serve -s build -l 4000`` and open tab with URL ``http://localhost:4000``.
