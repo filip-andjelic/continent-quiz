@@ -1,0 +1,56 @@
+.top-result {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation-name: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+  animation-delay: 0.8s;
+
+  .position {
+    border-radius: 14px;
+    border: 2px solid $success-color;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 5px;
+    box-sizing: border-box;
+    color: $success-color;
+  }
+  .points-wrapper {
+    margin-left: 15px;
+
+    .date, .points {
+      margin: 0;
+      margin-top: 3px;
+    }
+    .date {
+      font-size: 12px;
+      color: $light-text-color;
+    }
+    .points {
+      font-size: 20px;
+      font-weight: 600;
+      color: $dark-text-color;
+    }
+  }
+
+  &.disabled {
+    .position {
+      border: 2px solid $dark-text-color;
+      color: $dark-text-color;
+    }
+  }
+  &:nth-child(2) {
+    animation-delay: 1.4s;
+  }
+  &:nth-child(3) {
+    animation-delay: 1.8s;
+  }
+}

@@ -1,0 +1,124 @@
+// Normalize & style wrapper elements
+html {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+body {
+  min-height: 470px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  height: 100vh;
+  background-color: transparent;
+  font-family: $font;
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen {
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  max-width: 400px;
+  margin: auto;
+}
+// Layout classes' style
+.flex {
+  display: flex;
+}
+.flex-column-full {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.block-full {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.circle-rounded {
+  border-radius: 50%;
+}
+.padding-15 {
+  padding: 15px;
+}
+.padding-side-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.padding-10 {
+  padding: 10px;
+}
+.padding-20 {
+  padding: 20px;
+}
+.margin-r-sidenav {
+  margin-right: 90px;
+}
+.flex-1 {
+  flex: 1;
+}
+.full-flex-box {
+  display: flex;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.column-direction {
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-centered {
+  display: flex;
+
+  &:not(.column-direction) {
+    justify-content: center;
+    justify-items: center;
+  }
+  &.column-direction {
+    align-items: center;
+    align-content: center;
+  }
+}
+.vertical-centered {
+  display: flex;
+
+  &:not(.column-direction) {
+    align-items: center;
+    align-content: center;
+  }
+  &.column-direction {
+    justify-content: center;
+    justify-items: center;
+  }
+}

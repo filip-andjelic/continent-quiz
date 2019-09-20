@@ -1,0 +1,138 @@
+.question-image {
+  height: 230px;
+  background-size: 100% 100%;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  animation-name: slideInLeft;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+}
+
+.question-answers {
+  margin-top: 20px;
+
+  .question-answer {
+    display: flex;
+    margin: 10px 0px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 1.5px solid $theme-basic-light;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    animation-name: flipIn;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+
+    &:hover {
+      opacity: 0.9;
+      border-color: $theme-basic;
+    }
+
+    &.selected {
+      background-color: $theme-basic-light;
+
+      .answer-status {
+        background-image: url('./assets/wrong.png');
+      }
+    }
+
+    &.correct {
+      animation-name: flash;
+      animation-iteration-count: 2;
+      animation-duration: 0.6s;
+
+      .answer-status {
+        background-image: url('./assets/check.png');
+      }
+    }
+
+    .answer-status {
+      background-size: 100% 100%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      margin-right: 7px;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .question-answer-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-bottom: -5px;
+    color: $theme-dark;
+    flex: 1;
+    text-align: left;
+  }
+}
+
+.play-image {
+  background-image: url('./assets/globe.png');
+  background-size: 100% 100%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  margin-right: 7px;
+}
+
+.return-image {
+  background-image: url('./assets/back.png');
+  background-size: 100% 100%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  margin-right: 7px;
+}
+
+.home-image {
+  background-image: url('./assets/home.png');
+  background-size: 130% 120%;
+  background-position: 70% 110%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+}
+
+.result-title {
+  font-size: 24px;
+  line-height: 0px;
+  text-align: center;
+  margin: 20px;
+  color: $text-color;
+  opacity: 0;
+  animation-name: flipIn;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+  animation-delay: 0.8s;
+}
+
+.result-points {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  opacity: 0;
+  animation-name: flipIn;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+  animation-delay: 0.8s;
+}
+
+.result-image {
+  width: 100px;
+  height: 100px;
+  margin: 60px auto;
+  animation-name: zoomIn;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.8s;
+}
